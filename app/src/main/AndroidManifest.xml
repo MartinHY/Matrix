@@ -15,6 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MatrixBaseActivity" />
+        <activity android:name=".MatrixDistortionActivity" />
+        <activity android:name=".ColorMatrixActivity" />
+        <activity android:name=".ColorFilterActivity"></activity>
     </application>
 
 </manifest>
