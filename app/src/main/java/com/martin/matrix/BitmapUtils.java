@@ -89,7 +89,7 @@ public class BitmapUtils {
 
         Bitmap resource = Bitmap.createBitmap(reWidth, reHeight, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(resource);
-        canvas.drawColor(Color.BLUE);
+//        canvas.drawColor(Color.BLUE);//模擬空白
         canvas.concat(matrix);
         Paint paint = new Paint();
         paint.setAntiAlias(true);
@@ -133,7 +133,7 @@ public class BitmapUtils {
         Log.i(Tag, "height: " + height + "   reHeight   :" + reHeight);
         Bitmap resource = Bitmap.createBitmap(reWidth, reHeight, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(resource);
-        canvas.drawColor(Color.BLACK);
+//        canvas.drawColor(Color.BLACK);//模擬空白
         matrix.postRotate(degree, reWidth / 2, reHeight / 2);
         canvas.concat(matrix);
         Paint paint = new Paint();

@@ -1,16 +1,55 @@
 package com.martin.matrix;
 
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
+import android.graphics.Paint;
 import android.widget.ImageView;
 
 /**
+ * 我收集的颜色滤镜
  * Created by Martin on 2016/8/1 0001.
+ *
  */
 public class ColorFilter {
 
+    /**
+     * 为imageView设置颜色滤镜
+     * @param imageView
+     * @param colormatrix
+     */
     public static void setColorFilter(ImageView imageView, float[] colormatrix) {
         imageView.setColorFilter(new ColorMatrixColorFilter(new ColorMatrix(colormatrix)));
+    }
+
+    /**
+     * 生成对应颜色滤镜的图片，并回收原图
+     * @param bitmap
+     * @param colormatrix
+     * @return
+     */
+    public static Bitmap setColorFilter(Bitmap bitmap, float[] colormatrix) {
+        return setColorFilter(bitmap, colormatrix, true);
+    }
+
+    /**
+     * 生成对应颜色滤镜的图片
+     * @param bitmap
+     * @param colormatrix
+     * @param isRecycle
+     * @return
+     */
+    public static Bitmap setColorFilter(Bitmap bitmap, float[] colormatrix, boolean isRecycle) {
+        Bitmap resource = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.ARGB_8888);
+        Paint paint = new Paint();
+        paint.setAntiAlias(true);
+        paint.setColorFilter(new ColorMatrixColorFilter(new ColorMatrix(colormatrix)));
+        Canvas canvas = new Canvas(resource);
+        canvas.drawBitmap(bitmap, 0, 0, paint);
+        if (isRecycle)
+            BitmapUtils.destroyBitmap(bitmap);
+        return resource;
     }
 
     // 黑白
