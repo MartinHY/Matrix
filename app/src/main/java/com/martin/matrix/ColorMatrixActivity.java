@@ -19,8 +19,8 @@ public class ColorMatrixActivity extends AppCompatActivity implements SeekBar.On
         setContentView(R.layout.activity_color_matrix);
         colorMatrix = new ColorMatrix();
         colorMatrix.setScale(caculate(128), caculate(128), caculate(128), caculate(128));
-        imageView.setColorFilter(new ColorMatrixColorFilter(colorMatrix));
         imageView = (ImageView) findViewById(R.id.imageView);
+        imageView.setColorFilter(new ColorMatrixColorFilter(colorMatrix));
         seekBarR = (SeekBar) findViewById(R.id.bar_R);
         seekBarG = (SeekBar) findViewById(R.id.bar_G);
         seekBarB = (SeekBar) findViewById(R.id.bar_B);
