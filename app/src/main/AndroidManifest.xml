@@ -18,7 +18,8 @@
         <activity android:name=".MatrixBaseActivity" />
         <activity android:name=".MatrixDistortionActivity" />
         <activity android:name=".ColorMatrixActivity" />
-        <activity android:name=".ColorFilterActivity"></activity>
+        <activity android:name=".ColorFilterActivity" />
+        <activity android:name=".ColorHueActivity"></activity>
     </application>
 
 </manifest>

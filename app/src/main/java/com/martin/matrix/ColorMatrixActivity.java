@@ -1,17 +1,22 @@
 package com.martin.matrix;
 
+import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 public class ColorMatrixActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
     ImageView imageView;
     SeekBar seekBarR, seekBarG, seekBarB, seekBarA;
     ColorMatrix colorMatrix;
+    View colorView;
+    TextView colorText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +30,9 @@ public class ColorMatrixActivity extends AppCompatActivity implements SeekBar.On
         seekBarG = (SeekBar) findViewById(R.id.bar_G);
         seekBarB = (SeekBar) findViewById(R.id.bar_B);
         seekBarA = (SeekBar) findViewById(R.id.bar_A);
+
+        colorView = findViewById(R.id.color_view);
+        colorText = (TextView) findViewById(R.id.color_text);
 
         seekBarR.setOnSeekBarChangeListener(this);
         seekBarG.setOnSeekBarChangeListener(this);
@@ -41,8 +49,20 @@ public class ColorMatrixActivity extends AppCompatActivity implements SeekBar.On
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
         colorMatrix.setScale(caculate(seekBarR.getProgress()), caculate(seekBarG.getProgress()),
                 caculate(seekBarB.getProgress()), caculate(seekBarA.getProgress()));
+
+        colorText.setText("颜色值：#" + Integer.toHexString(seekBarA.getProgress())
+                + Integer.toHexString(seekBarR.getProgress())
+                + Integer.toHexString(seekBarG.getProgress())
+                + Integer.toHexString(seekBarB.getProgress()));
+
+        colorView.setBackgroundColor(Color.argb(seekBarA.getProgress(),
+                seekBarR.getProgress(),
+                seekBarG.getProgress(),
+                seekBarB.getProgress()));
+
         imageView.setColorFilter(new ColorMatrixColorFilter(colorMatrix));
     }
+
 
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {

@@ -18,29 +18,6 @@
         android:scaleType="centerCrop"
         android:src="@mipmap/test1" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/color_text"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="颜色偏向："
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/color_view"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,11 +31,11 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="R:"
+            android:text="      色相:     "
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <SeekBar
-            android:id="@+id/bar_R"
+            android:id="@+id/bar_hue"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
@@ -78,11 +55,11 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="G:"
+            android:text="彩度(饱和):"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <SeekBar
-            android:id="@+id/bar_G"
+            android:id="@+id/bar_saturation"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
@@ -103,11 +80,11 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="B:"
+            android:text="明度(亮度):"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <SeekBar
-            android:id="@+id/bar_B"
+            android:id="@+id/bar_lightness"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
@@ -115,31 +92,5 @@
             android:max="255"
             android:progress="128" />
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="A:"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <SeekBar
-            android:id="@+id/bar_A"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1"
-            android:max="255"
-            android:progress="128" />
-
-    </LinearLayout>
-
 
 </LinearLayout>

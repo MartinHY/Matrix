@@ -12,6 +12,6 @@ public class ColorFilterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_color_filter);
         imageView = (ImageView) findViewById(R.id.imageView);
-        ColorFilter.setColorFilter(imageView, ColorFilter.colormatrix_gete);
+        ColorFilter.imageViewColorFilter(imageView, ColorFilter.colormatrix_gete);
     }
 }

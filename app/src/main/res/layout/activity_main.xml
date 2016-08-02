@@ -8,35 +8,46 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:gravity="center_vertical"
     tools:context="com.martin.matrix.MainActivity">
 
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MatrixBase"
         android:id="@+id/bt_base"
-        android:layout_gravity="center_horizontal" />
-
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MatrixDistortion"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:text="MatrixBase" />
+
+    <Button
         android:id="@+id/bt_distortion"
-        android:layout_gravity="center_horizontal" />
-
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ColorMatrix"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:text="MatrixDistortion" />
+
+    <Button
         android:id="@+id/bt_color_matrix"
-        android:layout_gravity="center_horizontal" />
-
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ColorFilter"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:text="ColorMatrix" />
+
+    <Button
+        android:id="@+id/bt_color_hue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:text="ColorHue" />
+
+    <Button
         android:id="@+id/bt_color_filter"
-        android:layout_gravity="center_horizontal" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:text="ColorFilter" />
 </LinearLayout>

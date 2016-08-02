@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.bt_base).setOnClickListener(this);
         findViewById(R.id.bt_distortion).setOnClickListener(this);
         findViewById(R.id.bt_color_matrix).setOnClickListener(this);
+        findViewById(R.id.bt_color_hue).setOnClickListener(this);
         findViewById(R.id.bt_color_filter).setOnClickListener(this);
     }
 
@@ -35,6 +36,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_distortion:
                 intent.setClass(MainActivity.this, MatrixDistortionActivity.class);
+                break;
+            case R.id.bt_color_hue:
+                intent.setClass(MainActivity.this, ColorHueActivity.class);
                 break;
             case R.id.bt_color_matrix:
                 intent.setClass(MainActivity.this, ColorMatrixActivity.class);
