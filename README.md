@@ -1,5 +1,5 @@
 # Matrix
 Matrix demo
-![Color.jpg](http://upload-images.jianshu.io/upload_images/2510337-ab25f0157ad9114a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Color.jpg](https://github.com/MartinBZDQSM/Matrix/blob/master/Color.jpg)
 
 #[博客地址](https://github.com/MartinBZDQSM/Matrix)
