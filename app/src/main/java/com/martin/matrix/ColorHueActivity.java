@@ -39,14 +39,17 @@ public class ColorHueActivity extends AppCompatActivity implements SeekBar.OnSee
         float mSaturationValue = seekBarSaturation.getProgress() / 128f;
         float mLightnessValue = seekBarLightness.getProgress() / 128f;
 
+        //设置色相
         mHueMatrix.reset();
         mHueMatrix.setRotate(0, mHueValue);
         mHueMatrix.setRotate(1, mHueValue);
         mHueMatrix.setRotate(2, mHueValue);
 
+        //设置饱和度
         mSaturationMatrix.reset();
         mSaturationMatrix.setSaturation(mSaturationValue);
 
+        //亮度
         mLightnessMatrix.reset();
         mLightnessMatrix.setScale(mLightnessValue, mLightnessValue, mLightnessValue, 1);
 
