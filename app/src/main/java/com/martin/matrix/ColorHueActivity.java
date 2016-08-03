@@ -15,11 +15,12 @@ public class ColorHueActivity extends AppCompatActivity implements SeekBar.OnSee
     ColorMatrix mSaturationMatrix = new ColorMatrix();
     ColorMatrix mLightnessMatrix = new ColorMatrix();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_color_hue);
+
         imageView = (ImageView) findViewById(R.id.imageView);
 
         seekBarHue = (SeekBar) findViewById(R.id.bar_hue);
@@ -46,7 +47,6 @@ public class ColorHueActivity extends AppCompatActivity implements SeekBar.OnSee
         mSaturationMatrix.reset();
         mSaturationMatrix.setSaturation(mSaturationValue);
 
-        mLightnessMatrix.reset();
         mLightnessMatrix.reset();
         mLightnessMatrix.setScale(mLightnessValue, mLightnessValue, mLightnessValue, 1);
 

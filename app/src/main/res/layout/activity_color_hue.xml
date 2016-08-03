@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:scaleType="centerCrop"
-        android:src="@mipmap/test1" />
+        android:src="@mipmap/test" />
 
 
     <LinearLayout
@@ -37,8 +37,8 @@
         <SeekBar
             android:id="@+id/bar_hue"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:max="255"
             android:progress="128" />
@@ -61,8 +61,8 @@
         <SeekBar
             android:id="@+id/bar_saturation"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:max="255"
             android:progress="128" />
@@ -86,8 +86,8 @@
         <SeekBar
             android:id="@+id/bar_lightness"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:max="255"
             android:progress="128" />
